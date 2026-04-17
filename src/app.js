@@ -6,5 +6,5 @@ app.use(express.json());
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'UP', message: 'Server is healthy' });
 });
-
+app
 module.exports = app;
