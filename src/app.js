@@ -1,7 +1,12 @@
-const express = require('express')
-const app = express(
+const express = require('express');
+const app = express();
 
 app.use(express.json());
+
+
+app.get('/', (req, res) => {
+  res.send('Hello, this is testing of CI/CD 🚀');
+});
 
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'UP', message: 'Server is healthy' });
